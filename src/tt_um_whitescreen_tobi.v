@@ -235,5 +235,8 @@ end // initial
 `FIRRTL_AFTER_INITIAL
 `endif
 `endif // SYNTHESIS
-  wire _unused = &{ena,, ui_in, uio_in, 1'b0};
+  wire _unused = &{ena, 1'b0};
+  wire [7:0] used_ui  = ui_in;
+  wire [7:0] used_uio = uio_in;
+
 endmodule
