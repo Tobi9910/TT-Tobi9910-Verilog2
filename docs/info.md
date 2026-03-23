@@ -9,12 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
 It's an incredibly simple VGA controller, that i made and did not get time to fully utilize. Simple program inputs a white screen to it.
 
 ## How to test
 
-Explain how to use your project
+
 Just plug the VGA extension in, and connect it to a screen
 
 ## External hardware
