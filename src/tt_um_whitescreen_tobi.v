@@ -156,11 +156,11 @@ module tt_um_whitescreen_tobi(
   input        clk,
   input        rst_n,
   input        ena,
-  input  [7:0] io_ui_in, // @[\\src\\main\\scala\\whitescreen.scala 7:14]
-  output [7:0] io_uo_out, // @[\\src\\main\\scala\\whitescreen.scala 7:14]
-  input  [7:0] io_uio_in, // @[\\src\\main\\scala\\whitescreen.scala 7:14]
-  output [7:0] io_uio_out, // @[\\src\\main\\scala\\whitescreen.scala 7:14]
-  output [7:0] io_uio_oe // @[\\src\\main\\scala\\whitescreen.scala 7:14]
+  input  [7:0] ui_in, // @[\\src\\main\\scala\\whitescreen.scala 7:14]
+  output [7:0] uo_out, // @[\\src\\main\\scala\\whitescreen.scala 7:14]
+  input  [7:0] uio_in, // @[\\src\\main\\scala\\whitescreen.scala 7:14]
+  output [7:0] uio_out, // @[\\src\\main\\scala\\whitescreen.scala 7:14]
+  output [7:0] uio_oe // @[\\src\\main\\scala\\whitescreen.scala 7:14]
 );
 `ifdef RANDOMIZE_REG_INIT
   reg [31:0] _RAND_0;
@@ -178,9 +178,9 @@ module tt_um_whitescreen_tobi(
     .io_hsync(controller_io_hsync),
     .io_vsync(controller_io_vsync)
   );
-  assign io_uo_out = {VGA_hi,VGA_lo}; // @[\\src\\main\\scala\\whitescreen.scala 25:16]
-  assign io_uio_out = 8'h0; // @[\\src\\main\\scala\\whitescreen.scala 33:14]
-  assign io_uio_oe = 8'h0; // @[\\src\\main\\scala\\whitescreen.scala 34:13]
+  assign uo_out = {VGA_hi,VGA_lo}; // @[\\src\\main\\scala\\whitescreen.scala 25:16]
+  assign uio_out = 8'h0; // @[\\src\\main\\scala\\whitescreen.scala 33:14]
+  assign uio_oe = 8'h0; // @[\\src\\main\\scala\\whitescreen.scala 34:13]
   assign controller_clk = clk;
   assign controller_rst_n = rst_n;
   always @(posedge clk) begin
